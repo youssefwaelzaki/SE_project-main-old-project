@@ -1,11 +1,13 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const { v4 } = require('uuid');
-const customers = require('../../models/customers');
+const User = require('../../models/user'); // Assuming your user model is in this path
+const Car = require('../../models/car'); // Assuming your car model is in this path
+const ShoppingCart = require('../../models/shoppingCart'); // Assuming your shopping cart model is in this path
 
 const router = express.Router();
 
-
+// Register new user
 router.post('/register', async (req, res) => {
   try {
     const existingUser = await User.findOne({ email: req.body.email });
@@ -32,6 +34,7 @@ router.post('/register', async (req, res) => {
   }
 });
 
+// User login
 router.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -46,20 +49,39 @@ router.post('/login', async (req, res) => {
       return res.status(401).send('Invalid password');
     }
 
-    // Generate a session token
     const sessionToken = v4();
 
-    // Save the session token to user document
     user.sessionToken = sessionToken;
     await user.save();
 
-    return res.status(200).json({ message: 'Login successful', user });
+    return res.status(200).json({ message: 'Login successful', user, sessionToken });
   } catch (error) {
     console.error(error);
     return res.status(500).send('Internal Server Error');
   }
 });
 
+// User logout
+router.post('/logout', async (req, res) => {
+  try {
+    const { email } = req.body;
+
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(404).send('User not found');
+    }
+
+    user.sessionToken = null;
+    await user.save();
+
+    return res.status(200).send('Logout successful');
+  } catch (error) {
+    console.error(error);
+    return res.status(500).send('Internal Server Error');
+  }
+});
+
+// Reset user password
 router.put('/resetPassword', async (req, res) => {
   try {
     const { email, newPassword } = req.body;
@@ -80,6 +102,7 @@ router.put('/resetPassword', async (req, res) => {
   }
 });
 
+// Update user data
 router.put('/updateUserData', async (req, res) => {
   try {
     const { id, firstName, lastName, email } = req.body;
@@ -94,6 +117,93 @@ router.put('/updateUserData', async (req, res) => {
   } catch (error) {
     console.error(error);
     return res.status(500).send('Could not update user data');
+  }
+});
+
+// Get user profile
+router.get('/profile', async (req, res) => {
+  try {
+    const { sessionToken } = req.headers;
+
+    const user = await User.findOne({ sessionToken });
+    if (!user) {
+      return res.status(404).send('User not found');
+    }
+
+    return res.status(200).json(user);
+  } catch (error) {
+    console.error(error);
+    return res.status(500).send('Internal Server Error');
+  }
+});
+
+// Get all cars in stock
+router.get('/cars', async (req, res) => {
+  try {
+    const cars = await Car.find();
+    return res.status(200).json(cars);
+  } catch (error) {
+    console.error(error);
+    return res.status(500).send('Internal Server Error');
+  }
+});
+
+// Add car to shopping cart
+router.post('/cart', async (req, res) => {
+  try {
+    const { userId, carId } = req.body;
+
+    const cartItem = new ShoppingCart({ userId, carId });
+    await cartItem.save();
+
+    return res.status(200).json(cartItem);
+  } catch (error) {
+    console.error(error);
+    return res.status(500).send('Internal Server Error');
+  }
+});
+
+// Remove car from shopping cart
+router.delete('/cart', async (req, res) => {
+  try {
+    const { userId, carId } = req.body;
+
+    await ShoppingCart.findOneAndDelete({ userId, carId });
+
+    return res.status(200).send('Car removed from cart');
+  } catch (error) {
+    console.error(error);
+    return res.status(500).send('Internal Server Error');
+  }
+});
+
+// Get shopping cart items
+router.get('/cart', async (req, res) => {
+  try {
+    const { userId } = req.query;
+
+    const cartItems = await ShoppingCart.find({ userId }).populate('carId');
+    return res.status(200).json(cartItems);
+  } catch (error) {
+    console.error(error);
+    return res.status(500).send('Internal Server Error');
+  }
+});
+
+// Proceed to payment
+router.post('/payment', async (req, res) => {
+  try {
+    const { userId, paymentDetails } = req.body;
+
+    // Assume payment processing logic here
+
+    // Clear user's shopping cart after successful payment
+    await ShoppingCart.deleteMany({ userId });
+
+    return res.status(200).send('Payment successful');
+  } catch (error) {
+    console.error(error);
+    return res.status(500).send('Internal Server Error');
   }
 });
 

@@ -1,0 +1,52 @@
+.proceed-to-payment-page {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #222222, #444444, #666666); /* Black, red, and grey gradient background */
+    color: #fff; /* White text */
+  }
+  
+  .payment-card {
+    background-color: #333; /* Dark background color for cards */
+    color: #fff; /* White text */
+    margin: 0 auto; /* Center the card */
+    max-width: 500px; /* Set max width for the card */
+    padding: 20px; /* Add padding to the card */
+  }
+  
+  .payment-button {
+    background-color: #dc3545; /* Red color for the button */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .payment-button:hover {
+    background-color: #c82333; /* Darker red color on hover */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .dashboard-button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .dashboard-button:hover {
+    background-color: #c82333;
+  }
+  

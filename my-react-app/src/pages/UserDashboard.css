@@ -1,0 +1,80 @@
+/* UserDashboard.css */
+
+/* Custom Styles */
+body {
+    background: linear-gradient(90deg, #222222, #444444, #666666);
+    color: #fff;
+  }
+  
+  .navbar {
+    background-color: #000;
+  }
+  
+  .navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar-brand img {
+    max-height: 30px;
+    margin-right: 10px;
+  }
+  
+  .navbar-nav .nav-item {
+    margin-left: 10px;
+  }
+  
+  .navbar-nav .nav-item:last-child {
+    margin-right: 10px;
+  }
+  
+  .container {
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .shopping-cart-btn,
+  .stock-btn {
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  .shopping-cart-btn:hover,
+  .stock-btn:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .car-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .car-card {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 200px;
+  }
+  
+  .car-card h3 {
+    margin-bottom: 10px;
+  }
+  
+  .car-card button {
+    margin-top: 10px;
+  }
+  

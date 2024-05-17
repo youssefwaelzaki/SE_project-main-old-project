@@ -1,0 +1,56 @@
+/* MainPage.css */
+
+/* Custom Styles */
+body {
+    background: linear-gradient(90deg, #222222, #444444, #666666);
+    color: #fff;
+  }
+  
+  .navbar {
+    background-color: #000;
+  }
+  
+  .navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar-brand img {
+    max-height: 30px;
+    margin-right: 10px;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: transparent;
+  }
+  
+  .dropdown-menu {
+    background-color: #000;
+  }
+  
+  .dropdown-item {
+    color: #fff !important;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #333 !important;
+  }
+  
+  .container {
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .car-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .car-image img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  

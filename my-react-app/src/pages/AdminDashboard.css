@@ -1,0 +1,56 @@
+/* AdminDashboard.css */
+
+/* Custom Styles */
+body {
+    background: linear-gradient(90deg, #222222, #444444, #666666);
+    color: #fff;
+  }
+  
+  .navbar {
+    background-color: #000;
+  }
+  
+  .navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar-brand img {
+    max-height: 30px;
+    margin-right: 10px;
+  }
+  
+  .navbar-nav .nav-item {
+    margin-left: 10px;
+  }
+  
+  .navbar-nav .nav-item:last-child {
+    margin-right: 10px;
+  }
+  
+  .container {
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .admin-functions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .btn-primary,
+  .btn-danger {
+    font-size: 18px;
+  }
+  

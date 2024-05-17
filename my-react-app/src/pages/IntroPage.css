@@ -1,0 +1,59 @@
+/* IntroPage.css */
+
+/* Custom Styles */
+body {
+  background: linear-gradient(90deg, #222222, #444444, #666666); /* Black, red, and grey gradient background */
+  color: #fff; /* White text */
+}
+
+.navbar {
+  background-color: #000; /* Black navbar color */
+}
+
+.navbar-brand {
+  color: #fff; /* White text */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-brand img {
+  max-height: 30px; /* Adjust the height of the logo */
+  margin-right: 10px; /* Add some spacing between the logo and the text */
+}
+
+.container {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.welcome-container {
+  text-align: center;
+  margin-top: 20vh; /* Adjust vertical position */
+}
+
+.welcome-text {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+.welcome-paragraph {
+  font-size: 24px;
+  font-family: cursive;
+}
+
+.get-started-button {
+  background-color: #dc3545; /* Red color for the button */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none; /* Remove underline */
+}
+
+.get-started-button:hover {
+  background-color: #c82333; /* Darker red color on hover */
+}

@@ -1,0 +1,58 @@
+/* Products.css */
+
+/* Custom Styles */
+.heading {
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .add-product-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .product-input {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .add-btn {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .product-list {
+    margin-top: 20px;
+  }
+  
+  .product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .product-item span {
+    color: #fff;
+  }
+  
+  .delete-btn {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

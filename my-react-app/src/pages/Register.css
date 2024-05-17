@@ -1,0 +1,71 @@
+/* RegistrationPage.css */
+
+/* Custom Styles */
+body {
+    background: linear-gradient(90deg, #222222, #444444, #666666);
+    color: #fff;
+  }
+  
+  .navbar {
+    background-color: #000;
+  }
+  
+  .navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar-brand img {
+    max-height: 30px;
+    margin-right: 10px;
+  }
+  
+  .navbar-nav .nav-item {
+    margin-left: 10px;
+  }
+  
+  .navbar-nav .nav-item:last-child {
+    margin-right: 10px;
+  }
+  
+  .container {
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .custom-register-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .custom-register-btn:hover {
+    background-color: #c82333;
+  }
+  
+  .custom-register-input {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .form-group label {
+    color: #fff;
+  }
+  

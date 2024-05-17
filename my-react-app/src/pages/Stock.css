@@ -1,0 +1,43 @@
+.stock-page {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #222222, #444444, #666666); /* Black, red, and grey gradient background */
+    color: #fff; /* White text */
+  }
+  
+  .card {
+    background-color: #333; /* Dark background color for cards */
+    color: #fff; /* White text */
+  }
+  
+  .card .btn {
+    background-color: #dc3545; /* Red color for the button */
+    color: #fff; /* White text */
+  }
+  
+  .card .btn:hover {
+    background-color: #c82333; /* Darker red color on hover */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .dashboard-button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .dashboard-button:hover {
+    background-color: #c82333;
+  }
+  
