@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Main Page</title>
+  <link rel="stylesheet" href="/styles/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/style.css">
+  <style>
+    .header {
+      background-color: black;
+      padding: 20px;
+      color: white;
+    }
+
+    .header a {
+      color: white;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    .header a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .container h1 {
+      margin-bottom: 20px;
+    }
+
+    .container .button-container {
+      margin-bottom: 20px;
+    }
+
+    .container .button-container button {
+      margin-bottom: 10px;
+      width: 200px;
+      height: 50px;
+      font-size: 18px;
+    }
+  </style>
+  <script src="/js/jquery-2.2.0.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="header">
+    <!-- No Home button -->
+  </div>
+
+  <div class="container">
+    <h1>Main Page</h1>
+    <div class="button-container">
+      <button onclick="location.href='/login'" class="btn btn-primary btn-lg">Login</button>
+      <button onclick="location.href='/register'" class="btn btn-primary btn-lg">Register</button>
+      <button onclick="location.href='/resetPassword'" class="btn btn-primary btn-lg">Reset Password</button>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      // Add any JavaScript code here for button click events, etc.
+      
+    });
+  </script>
+</body>
+</html>

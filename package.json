@@ -1,0 +1,26 @@
+{
+  "name": "SE_PROJECT",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-handlebars": "^7.0.7",
+    "globally": "^0.0.0",
+    "hjs": "0.0.6",
+    "hogan-express": "^0.5.2",
+    "knex": "^2.4.2",
+    "lodash": "4.17.21",
+    "mongodb": "^6.6.1",
+    "mongoose": "^8.3.4",
+    "pg": "8.7.1",
+    "pg-promise": "^11.5.0",
+    "uuid": "8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
